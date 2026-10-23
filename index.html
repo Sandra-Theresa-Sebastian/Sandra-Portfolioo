@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandra Theresa Sebastian | Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#fafafa;
+      color:#222;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    h2{
+      font-size:2rem;
+      margin-bottom:25px;
+      color:#111827;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      z-index:1000;
+    }
+
+    nav h3{
+      font-weight:700;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+      font-size:.95rem;
+    }
+
+    nav ul li a:hover{
+      color:#2563eb;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:60px;
+      flex-wrap:wrap;
+      padding-top:120px;
+    }
+
+    .hero-text{
+      max-width:550px;
+    }
+
+    .hero h1{
+      font-size:3.4rem;
+      font-weight:800;
+      color:#111827;
+    }
+
+    .hero h4{
+      margin:20px 0;
+      color:#2563eb;
+      font-weight:600;
+      font-size:1.05rem;
+    }
+
+    .hero p{
+      color:#555;
+      margin-bottom:30px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:13px 24px;
+      border-radius:10px;
+      font-weight:600;
+      transition:.3s;
+      border:2px solid #2563eb;
+    }
+
+    .primary{
+      background:#2563eb;
+      color:white;
+    }
+
+    .secondary{
+      color:#2563eb;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* Profile Circle */
+
+.profile{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  overflow:hidden;
+  border:6px solid white;
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.profile img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+    /* Cards */
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    /* Education */
+
+    .education{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    /* Skills */
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+    }
+
+    .skill{
+      background:#eef4ff;
+      color:#2563eb;
+      padding:12px 18px;
+      border-radius:25px;
+      font-weight:600;
+    }
+
+    /* Timeline */
+
+    .timeline{
+      border-left:3px solid #2563eb;
+      padding-left:20px;
+    }
+
+    .timeline-item{
+      margin-bottom:30px;
+    }
+
+    .timeline-item h4{
+      color:#111827;
+      margin-bottom:5px;
+    }
+
+    .year{
+      color:#2563eb;
+      font-size:.9rem;
+      margin-bottom:8px;
+      display:block;
+    }
+
+    /* Project */
+
+    .project{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:25px;
+    }
+
+    .project-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:20px 0;
+    }
+
+    .tag{
+      background:#edf2ff;
+      padding:8px 14px;
+      border-radius:20px;
+      font-size:.85rem;
+      color:#2563eb;
+      font-weight:600;
+    }
+
+    /* Creative */
+
+    .creative-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+      gap:18px;
+      text-align:center;
+    }
+
+    .creative-grid .card{
+      padding:30px 20px;
+    }
+
+    .emoji{
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+
+    /* Contact */
+
+    .contact{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .contact a{
+      color:#2563eb;
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#777;
+      font-size:.9rem;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero h1{
+        font-size:2.4rem;
+      }
+
+      .profile{
+        width:190px;
+        height:190px;
+        font-size:4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <h3>Sandra.</h3>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#creative">Creative</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-text">
+    <p>HELLO, I'M</p>
+
+    <h1>Sandra Theresa Sebastian</h1>
+
+    <h4>Final Year BTech Computer Science Student · Tech Enthusiast · Programmer · Artist</h4>
+
+    <p>
+      Passionate about building efficient software systems and creating meaningful digital experiences.
+      I enjoy solving real-world problems through technology while balancing my creative side through art and design.
+    </p>
+
+    <div class="buttons">
+      <a href="#project" class="btn primary">View Project</a>
+
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+
+  </div>
+
+  
+  <div class="profile">
+  <img src="images/sandra.png" alt="Sandra Theresa Sebastian">
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <h2>About Me</h2>
+
+  <div class="card">
+
+    <p>
+      Driven and analytical Computer Science student with a strong foundation in software engineering,
+      backend development, system architecture, and workflow automation. I enjoy transforming complex
+      real-world challenges into clean, scalable software solutions.
+    </p>
+
+    <br>
+
+    <p>
+      My interests extend beyond programming into design, photography, and storytelling through visual content.
+      I believe technology and creativity work best together to create impactful experiences.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+  <h2>Education</h2>
+
+  <div class="education">
+
+    <div class="card">
+      <h3>BTech in Computer Science</h3>
+
+      <br>
+
+      <p>St. Joseph's College of Engineering and Technology, Palai</p>
+
+      <br>
+
+      <p><strong>University:</strong> APJ Abdul Kalam Technological University (KTU)</p>
+
+      <p><strong>Expected Graduation:</strong> 2027</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+  <h2>Technical Skills</h2>
+
+  <div class="skills">
+
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+    <div class="skill">C</div>
+    <div class="skill">SQL</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">Figma</div>
+    <div class="skill">Canva</div>
+    <div class="skill">Backend Integration</div>
+    <div class="skill">Workflow Automation</div>
+    <div class="skill">Database Management</div>
+    <div class="skill">Data Structures</div>
+    <div class="skill">Algorithm Analysis</div>
+    <div class="skill">Software Lifecycle Management</div>
+
+  </div>
+
+</section>
+
+<!-- LEADERSHIP -->
+
+<section id="leadership">
+
+  <h2>Leadership & Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="year">2026 – 2027</span>
+      <h4>Publicity Coordinator</h4>
+      <p>IEEE Student Branch SJCET Palai</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2025 – 2026</span>
+      <h4>Vice Chair — IEEE Industry Applications Society (IAS)</h4>
+      <p>IEEE Student Branch SJCET Palai</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2024 – 2025</span>
+      <h4>Secretary — IEEE Robotics & Automation Society (RAS)</h4>
+      <p>IEEE Student Branch SJCET Palai</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2023 – 2024</span>
+      <h4>Design Intern</h4>
+      <p>IEEE Student Branch SJCET Palai</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2026</span>
+      <h4>TEDx Curator Lead</h4>
+      <p>Led the curation team for TEDx at SJCET Palai.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2025</span>
+      <h4>TEDx Curator</h4>
+      <p>Curated speakers and event experiences for TEDx.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">Volunteer Experience</span>
+      <h4>Technical & Non-Technical Events</h4>
+      <p>
+        Volunteered for <strong>ASTHRA</strong> (National Level Tech Fest),
+        <strong>FACEOFF</strong> (National Level Dance Competition),
+        and various IEEE and college events.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section id="project">
+
+  <h2>Featured Project</h2>
+
+  <div class="project">
+
+    <div class="card">
+
+      <h3>SACK IT — AI Powered IT Support Automation System</h3>
+
+      <br>
+
+      <p>
+        SACK IT centralizes incoming IT support emails into an intelligent automated workflow.
+        Using AI-powered semantic search, ticket classification, prioritization, and automated responses,
+        it reduces manual intervention while ensuring unresolved issues are routed to the appropriate technicians.
+      </p>
+
+      <div class="project-tags">
+
+        <span class="tag">React</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Python</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Gemini AI</span>
+        <span class="tag">Scikit-Learn</span>
+        <span class="tag">n8n</span>
+        <span class="tag">Tailwind CSS</span>
+
+      </div>
+
+      <h4>My Contribution</h4>
+
+      <p>
+        Student Developer and Co-author of the BTech Computer Science Mini Project.
+        Contributed to backend development, AI workflow integration, database design,
+        and overall software implementation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CREATIVE -->
+
+<section id="creative">
+
+  <h2>Creative Side</h2>
+
+  <div class="creative-grid">
+
+    <div class="card">
+      <div class="emoji">🎨</div>
+      <h4>Painting</h4>
+    </div>
+
+    <div class="card">
+      <div class="emoji">✏️</div>
+      <h4>Drawing</h4>
+    </div>
+
+    <div class="card">
+      <div class="emoji">💃</div>
+      <h4>Dancing</h4>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📷</div>
+      <h4>Photography</h4>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🎬</div>
+      <h4>Video Editing</h4>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🖌️</div>
+      <h4>Designing</h4>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <h2>Let's Connect</h2>
+
+  <div class="contact">
+
+    <div class="card">
+      <h4>Email</h4>
+      <a href="mailto:sandrapathra@gmail.com">sandrapathra@gmail.com</a>
+    </div>
+
+    <div class="card">
+      <h4>GitHub</h4>
+      <a href="https://github.com/Sandra-Theresa-Sebastian" target="_blank">
+        github.com/Sandra-Theresa-Sebastian
+      </a>
+    </div>
+
+    
+
+    <div class="card">
+      <h4>Instagram</h4>
+      <a href="https://www.instagram.com/sandra.theresa_" target="_blank">
+        @sandra.theresa_
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Sandra Theresa Sebastian · Built with HTML, CSS & JavaScript
+</footer>
+
+</body>
+</html>
